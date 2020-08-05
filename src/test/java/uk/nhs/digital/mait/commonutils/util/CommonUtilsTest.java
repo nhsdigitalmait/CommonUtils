@@ -15,6 +15,7 @@
  */
 package uk.nhs.digital.mait.commonutils.util;
 
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -51,7 +52,7 @@ public class CommonUtilsTest {
      * Test of main method, of class CommonUtils.
      */
     @Test
-    public void testMain() {
+    public void testMain() throws IOException {
         System.out.println("main");
         String[] args = null;
         CommonUtils.main(args);

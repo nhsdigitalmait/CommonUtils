@@ -13,10 +13,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-
 package uk.nhs.digital.mait.commonutils.util;
 
 // Rev 28 Fix for ConfigurationStringTokeniser handling multiple spaces, extra tests
+import java.io.IOException;
+import java.util.Properties;
+
 // Rev 27 Mods for relative paths / jenkins builds
 // Rev 26 Added getConfigurationMap to DefaultSystemPropertiesConfigurator
 // Rev 25 Added build-impl.xml
@@ -31,7 +33,16 @@ package uk.nhs.digital.mait.commonutils.util;
 // Rev 17 Implemenetd Configurator getConfigurationMap
 // Rev 16 Added main class and FHIR namespace
 public class CommonUtils {
-     public static void main (String[] args) {
-         System.out.println("TKW CommonUtils Subversion $Rev: 28 $");
-     }
+
+    public static void main(String[] args) throws IOException {
+        ClassLoader classLoader = CommonUtils.class.getClassLoader();
+        Properties properties = new Properties();
+        properties.load(classLoader.getResourceAsStream("git.properties"));
+        String versionString = String.format("CommonUtils-%s %s %s",
+                properties.getProperty("git.build.version"),
+                properties.getProperty("git.commit.id.abbrev"),
+                properties.getProperty("git.commit.time"));
+
+        System.out.println(versionString);
+    }
 }
