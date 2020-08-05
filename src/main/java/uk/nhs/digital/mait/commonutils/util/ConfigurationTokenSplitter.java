@@ -13,7 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-// $Id: ConfigurationTokenSplitter.java 23 2018-06-29 11:51:34Z sfarrow $
 
 package uk.nhs.digital.mait.commonutils.util;
 import java.util.ArrayList;

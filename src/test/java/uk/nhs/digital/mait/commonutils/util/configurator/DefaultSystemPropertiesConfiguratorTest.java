@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: DefaultSystemPropertiesConfiguratorTest.java 28 2019-06-27 11:23:22Z sfarrow $
 package uk.nhs.digital.mait.commonutils.util.configurator;
 
 import java.util.ArrayList;

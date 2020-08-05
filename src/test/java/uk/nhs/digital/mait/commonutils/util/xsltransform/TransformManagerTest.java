@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: TransformManagerTest.java 19 2017-04-20 11:53:19Z sfarrow $
 package uk.nhs.digital.mait.commonutils.util.xsltransform;
 
 import java.io.ByteArrayInputStream;
@@ -98,7 +97,7 @@ public class TransformManagerTest {
     public void testDoTransform_String_InputStream() throws Exception {
         System.out.println("doTransform");
         String name = "name1";
-        String filename = "test/transform.xsl";
+        String filename = "src/test/resources/transform.xsl";
         instance.addTransform(name, filename);
         String tname = "name1";
         InputStream input = new ByteArrayInputStream("<a><b>testtext</b></a>".getBytes());
@@ -116,7 +115,7 @@ public class TransformManagerTest {
     public void testDoTransform_String_Reader() throws Exception {
         System.out.println("doTransform");
         String name = "name2";
-        String filename = "test/transform.xsl";
+        String filename = "src/test/resources/transform.xsl";
         instance.addTransform(name, filename);
         String tname = "name2";
         Reader input = new StringReader("<a><b>testtext</b></a>");
@@ -134,7 +133,7 @@ public class TransformManagerTest {
     public void testDoTransform_String_String() throws Exception {
         System.out.println("doTransform");
         String name = "name3";
-        String filename = "test/transform.xsl";
+        String filename = "src/test/resources/transform.xsl";
         instance.addTransform(name, filename);
         String tname = "name3";
         String input = "<a><b>testtext</b></a>";
@@ -152,7 +151,7 @@ public class TransformManagerTest {
     public void testAddTransform_String_InputStream() throws Exception {
         System.out.println("addTransform");
         String name = "name4";
-        InputStream is = new FileInputStream("test/transform.xsl");
+        InputStream is = new FileInputStream("src/test/resources/transform.xsl");
         instance.addTransform(name, is);
     }
 
@@ -165,7 +164,7 @@ public class TransformManagerTest {
     public void testSetURIResolver() throws Exception {
         System.out.println("setURIResolver");
         String name = "testresolver";
-        instance.addTransform("testresolver", "test/transform.xsl");
+        instance.addTransform("testresolver", "src/test/resources/transform.xsl");
         URIResolver r = new ResourceResolver();
         instance.setURIResolver(name, r);
     }
@@ -199,7 +198,7 @@ public class TransformManagerTest {
     public void testAddTransform_String_String() throws Exception {
         System.out.println("addTransform");
         String name = "name5";
-        String filename = "test/transform.xsl";
+        String filename = "src/test/resources/transform.xsl";
         instance.addTransform(name, filename);
     }
 

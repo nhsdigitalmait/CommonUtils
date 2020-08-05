@@ -13,7 +13,6 @@ Copyright 2011 Damian Murphy <murff@warlock.org>
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-// $Id: DefaultSystemPropertiesConfigurator.java 26 2018-11-26 17:21:18Z sfarrow $
 
 package uk.nhs.digital.mait.commonutils.util.configurator;
 import java.util.ArrayList;

@@ -6,7 +6,6 @@
  *  14/06/2006 BIYA add comments
  *  22/02/2011 DAMU Added namespaces for XDR (SOAP 1.2, XOP, IHE XDS-B, EBXML LifeCycle and Registry RIM)
  */
-// $Id: SpineCfHNamespaceContext.java 21 2017-09-08 10:17:40Z sfarrow $
 
 
 package uk.nhs.digital.mait.commonutils.util;

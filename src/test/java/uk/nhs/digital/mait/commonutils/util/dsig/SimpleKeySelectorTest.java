@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: SimpleKeySelectorTest.java 19 2017-04-20 11:53:19Z sfarrow $
 package uk.nhs.digital.mait.commonutils.util.dsig;
 
 import java.io.FileInputStream;

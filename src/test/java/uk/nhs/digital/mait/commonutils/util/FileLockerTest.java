@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: FileLockerTest.java 19 2017-04-20 11:53:19Z sfarrow $
 package uk.nhs.digital.mait.commonutils.util;
 
 import java.io.File;
@@ -35,7 +34,7 @@ public class FileLockerTest {
 
     private FileLocker instance;
     
-    private static final String TESTTESTLOCKFILE = "test/testlockfile";
+    private static final String TESTTESTLOCKFILE = "src/test/resources/testlockfile";
 
     public FileLockerTest() {
     }

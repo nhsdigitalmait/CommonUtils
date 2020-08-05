@@ -13,7 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-// $Id: Logger.java 22 2017-12-13 11:20:59Z sfarrow $
 
 
 package uk.nhs.digital.mait.commonutils.util;

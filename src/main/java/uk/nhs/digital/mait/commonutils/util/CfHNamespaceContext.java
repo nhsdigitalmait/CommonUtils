@@ -23,7 +23,6 @@ package uk.nhs.digital.mait.commonutils.util;
  *
  * @author Damian Murphy <murff@warlock.org>
  */
-// $Id: CfHNamespaceContext.java 22 2017-12-13 11:20:59Z sfarrow $
 
 public class CfHNamespaceContext {
 

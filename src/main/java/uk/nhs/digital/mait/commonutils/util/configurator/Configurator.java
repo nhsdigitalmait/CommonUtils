@@ -13,7 +13,6 @@ Copyright 2011 Damian Murphy <murff@warlock.org>
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-// $Id: Configurator.java 23 2018-06-29 11:51:34Z sfarrow $
 
 package uk.nhs.digital.mait.commonutils.util.configurator;
 import java.util.Map;

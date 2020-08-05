@@ -13,7 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-// $Id: CanonicalAttributeComparator.java 16 2016-04-07 08:28:18Z sfarrow $
 
 package uk.nhs.digital.mait.commonutils.util.dsig;
 import org.w3c.dom.Attr;

@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: URIDereferenceReporterTest.java 26 2018-11-26 17:21:18Z sfarrow $
 package uk.nhs.digital.mait.commonutils.util.dsig;
 
 import org.junit.After;
