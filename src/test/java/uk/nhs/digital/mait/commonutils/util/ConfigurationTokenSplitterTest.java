@@ -41,21 +41,35 @@ public class ConfigurationTokenSplitterTest {
     
     @Before
     public void setUp() {
+        instance = new ConfigurationTokenSplitter("a b c");
     }
     
     @After
     public void tearDown() {
     }
 
+    private ConfigurationTokenSplitter instance = null;
+    
     /**
      * Test of split method, of class ConfigurationTokenSplitter.
      */
     @Test
     public void testSplit() throws Exception {
         System.out.println("split");
-        ConfigurationTokenSplitter instance = new ConfigurationTokenSplitter("a b c");
         String[] expResult = new String[]{"a","b","c"};
         String[] result = instance.split();
+        assertArrayEquals(expResult, result);
+    }
+
+    /**
+     * Test of split method, of class ConfigurationTokenSplitter.
+     */
+    @Test
+    public void testSplit_boolean() throws Exception {
+        System.out.println("split");
+        boolean preprocessing = false;
+        String[] expResult = new String[]{"a","b","c"};
+        String[] result = instance.split(preprocessing);
         assertArrayEquals(expResult, result);
     }
     

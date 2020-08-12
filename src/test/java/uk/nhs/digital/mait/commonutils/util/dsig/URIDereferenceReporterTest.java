@@ -65,5 +65,5 @@ public class URIDereferenceReporterTest {
             System.out.println(s);
         }
     }
-    
-}
+
+        }

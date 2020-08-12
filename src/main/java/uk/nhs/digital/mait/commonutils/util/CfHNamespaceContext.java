@@ -70,7 +70,7 @@ public class CfHNamespaceContext {
     // SCF: July 2017
     public static final String XHTML = "http://www.w3.org/1999/xhtml";
 
-    public static final String HSCIC_JSON = "org.warlock.jsonconverter.JsonXmlConverter";
+    public static final String HSCIC_JSON = "uk.nhs.digital.mait.jsonconverter.JsonXmlConverter";
     
 
     // this block always done by the classloader before the class is first used
