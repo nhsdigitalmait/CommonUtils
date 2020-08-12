@@ -70,7 +70,7 @@ public class CfHNamespaceContext {
     // SCF: July 2017
     public static final String XHTML = "http://www.w3.org/1999/xhtml";
 
-    public static final String HSCIC_JSON = "uk.nhs.digital.mait.jsonconverter.JsonXmlConverter";
+    public static final String NHS_DIGITAL_JSON = "uk.nhs.digital.mait.tkwx.jsonconverter.JsonXmlConverter";
     
 
     // this block always done by the classloader before the class is first used
@@ -122,7 +122,7 @@ public class CfHNamespaceContext {
         context.declarePrefix("xhtml", XHTML);
         
         // SCF: September 2017
-        context.declarePrefix("json", HSCIC_JSON);
+        context.declarePrefix("json", NHS_DIGITAL_JSON);
     }
 
     /**
