@@ -92,5 +92,5 @@ public class ConfigurationListenerTest {
         public void notifyConfigurationChange(String[] changed) {
         }
     }
-    
+
 }

@@ -17,6 +17,7 @@ package uk.nhs.digital.mait.commonutils.util.configurator;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -152,6 +153,16 @@ public class ConfiguratorTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of setProperties method, of class Configurator.
+     */
+    @Test(expected=Exception.class)
+    public void testSetProperties() throws Exception {
+        System.out.println("setProperties");
+        Properties p = null;
+        instance.setProperties(p);
+    }
+
     public class ConfiguratorImpl extends Configurator {
 
         @Override
@@ -185,5 +196,5 @@ public class ConfiguratorTest {
             return null;
         }
     }
-    
+
 }

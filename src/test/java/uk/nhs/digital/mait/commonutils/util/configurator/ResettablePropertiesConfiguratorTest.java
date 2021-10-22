@@ -45,7 +45,7 @@ public class ResettablePropertiesConfiguratorTest {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         instance = new ResettablePropertiesConfigurator();
         instance.setProperties(new Properties());
         instance.setConfiguration("testprop1","testval1");
@@ -59,7 +59,7 @@ public class ResettablePropertiesConfiguratorTest {
      * Test of setProperties method, of class ResettablePropertiesConfigurator.
      */
     @Test
-    public void testSetProperties() {
+    public void testSetProperties() throws Exception {
         System.out.println("setProperties");
         Properties p = new Properties();
         instance.setProperties(p);
