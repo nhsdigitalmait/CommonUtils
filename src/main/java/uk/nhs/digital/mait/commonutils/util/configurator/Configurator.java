@@ -17,6 +17,7 @@ Copyright 2011 Damian Murphy <murff@warlock.org>
 package uk.nhs.digital.mait.commonutils.util.configurator;
 import java.util.Map;
 import java.util.List;
+import java.util.Properties;
 /** Abstract superclass for a Configurator. This exists to allow platform- or
  * container-specific configuration systems to be used to supply properties.
  * The default implementation is based on System.properties - which is less
@@ -31,6 +32,7 @@ public abstract class Configurator {
     
     protected static Configurator me = init();
     protected static Exception bootException = null;
+    protected Properties properties = null;
     
     Configurator() {}
     
@@ -106,4 +108,13 @@ public abstract class Configurator {
      * @return List property, or null if the key is not found. 
      */
     public abstract List getConfigurationList(String key);
+    
+    /**
+     *
+     * @param p
+     * @throws UnsupportedOperationException
+     */
+    public synchronized void setProperties( Properties p) throws Exception {
+        throw new UnsupportedOperationException("Unsupported method in this class");
+    }
 }

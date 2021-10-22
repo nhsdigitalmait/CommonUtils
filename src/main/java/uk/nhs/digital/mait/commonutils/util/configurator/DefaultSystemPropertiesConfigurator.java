@@ -17,7 +17,6 @@ Copyright 2011 Damian Murphy <murff@warlock.org>
 package uk.nhs.digital.mait.commonutils.util.configurator;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Properties;
 import java.io.FileReader;
 /** Simple configurator implementation based on System properties.
  *
@@ -26,11 +25,11 @@ import java.io.FileReader;
 public class DefaultSystemPropertiesConfigurator 
     extends Configurator
 {
-    private Properties properties = System.getProperties();
     private ArrayList<ConfigurationListener> listeners = null;
     
     DefaultSystemPropertiesConfigurator()  {
-        listeners = new ArrayList<ConfigurationListener>();
+        listeners = new ArrayList();
+        properties = System.getProperties();
         String propertiesfile = System.getProperty("uk.nhs.digital.mait.commonutils.util.SystemPropertiesConfigurator.filename");
         try {
             System.getProperties().load(new FileReader(propertiesfile));

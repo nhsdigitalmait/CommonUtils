@@ -30,7 +30,6 @@ public class SingleSetPropertiesConfigurator
     extends Configurator
 {
     private ArrayList<ConfigurationListener> listeners = null;
-    private Properties properties = null;
     
     SingleSetPropertiesConfigurator()  {
         listeners = new ArrayList<ConfigurationListener>();
@@ -57,9 +56,8 @@ public class SingleSetPropertiesConfigurator
         throw new Exception("Fixed configuration set, cannot be updated");
     }
             
-    
-    public synchronized void setProperties(Properties p)
-            throws Exception
+    @Override
+    public synchronized void setProperties(Properties p) throws Exception
     {
         if (properties != null) {
             throw new Exception("Configurator properties already set");

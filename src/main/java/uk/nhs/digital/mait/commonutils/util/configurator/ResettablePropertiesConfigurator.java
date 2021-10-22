@@ -29,14 +29,14 @@ public class ResettablePropertiesConfigurator
         extends Configurator {
 
     private ArrayList<ConfigurationListener> listeners = null;
-    private Properties properties = null;
 
     ResettablePropertiesConfigurator() {
         super();
-        listeners = new ArrayList<ConfigurationListener>();
+        listeners = new ArrayList<>();
     }
 
-    public synchronized void setProperties(Properties p) {
+    @Override
+    public synchronized void setProperties(Properties p) throws Exception {
         properties = p;
     }
 
