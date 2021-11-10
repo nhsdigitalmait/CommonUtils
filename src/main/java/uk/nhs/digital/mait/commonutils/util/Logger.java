@@ -34,9 +34,6 @@ import java.util.logging.SimpleFormatter;
  *  Note:  setAppName(String name, String ldir) should be called before any loging call.  
  *         closeLog() will close the logging file.
  *         setAppName() and closeLog() should be called as a pair with a logging file.
- *
- * NOTE: This is very old code. It is planned to replace its use with the standard Java
- * logging facility.
  * 
  * @author Damian Murphy <murff@warlock.org>
  */
@@ -150,7 +147,7 @@ public class Logger {
      *  @param  name    application name
      *  @param  ldir    the log file directory
      */
-    public void setAppName(String name, String ldir) {
+    public void setAppName(String name, String ldir) throws Exception {
         if ((name == null) || (name.trim().length() == 0))
             return;
         if ((ldir == null) || (ldir.trim().length() == 0))
@@ -159,7 +156,7 @@ public class Logger {
             logDir = ldir;
             appName = name;
             
-            appLogger = java.util.logging.Logger.getLogger(appName); 
+            appLogger = java.util.logging.Logger.getLogger(appName);
             appLogger.setUseParentHandlers(false);
             StringBuilder sb = new StringBuilder(logDir);
             if(!(logDir.endsWith("/") || logDir.endsWith("\\"))) {
@@ -184,8 +181,10 @@ public class Logger {
                 sbe.append(logFileName);
                 sbe.append(" : ");
                 sbe.append(e.toString());
-                consoleLogger.log(Level.SEVERE,  sbe.toString());
-            }            
+                String errorMessage = sbe.toString();
+                consoleLogger.log(Level.SEVERE,  errorMessage);
+                throw new Exception(errorMessage);
+            }
         }
     }
 

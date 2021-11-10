@@ -141,12 +141,14 @@ public class LoggerTest {
 
     /**
      * Test of setAppName method, of class Logger.
+     * 
+     * @throws java.lang.Exception
      */
     @Test
-    public void testSetAppName() {
+    public void testSetAppName() throws Exception {
         System.out.println("setAppName");
         String name = "name";
-        String ldir = "test/logdir";
+        String ldir = "src/test/resources/logdir";
         instance.setAppName(name, ldir);
     }
 

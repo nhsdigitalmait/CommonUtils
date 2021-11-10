@@ -2,3 +2,5 @@
 /nbactions.xml
 /mygitpush.sh
 /nbproject/
+*.log
+
